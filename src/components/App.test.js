@@ -614,20 +614,12 @@ const ourList = [
    test('App fetches episodes data and renders data', async () => {
        mockFetchShow.mockResolvedValue(ourList)
 
+    const { getByText } = render(<App />);
 
-    // const { getByText, queryAllByTestId, getByTestId } = render(<App />);
+    getByText(/fetching data/i)
 
-    // getByText(/fetching data/i)
-
-
-    
     await wait(() => {
-
     })
-
-
-
-
 
 
 
